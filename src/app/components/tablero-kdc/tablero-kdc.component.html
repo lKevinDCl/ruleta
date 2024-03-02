@@ -1,0 +1,15 @@
+<!-- tablero-kdc.component.html -->
+
+<table class="casillas">
+  <tr *ngFor="let rowIndex of casillas; let i = index">
+    <td *ngFor="let colIndex of casillas.slice(i * 6, (i + 1) * 6)" class="casilla">{{ colIndex }}</td>
+  </tr>
+</table>
+
+<input placeholder="Número a apostar">
+<button (click)="mezclarNumeros()">Comenzar</button>
+<button (click)="lanzarCanica()">Lanzar Canica</button>
+
+<div class="resultado">
+  <p>{{ resultado }}</p>
+</div>
